@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Dead Redemption 2 | Галерея</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            aspect-ratio: 16/9;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link">Головна</a></li>
+                    <li><a href="about.html" class="nav-link">Про гру</a></li>
+                    <li><a href="releases.html" class="nav-link">Релізи</a></li>
+                    <li><a href="gallery.html" class="nav-link active">Галерея</a></li>
+                    <li><a href="contact.html" class="nav-link">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="page active">
+            <h1>Галерея</h1>
+            
+            <div class="content-section">
+                <h2>Зображення з гри</h2>
+                <p>Погляньте на захоплюючі краєвиди та моменти з Red Dead Redemption 2.</p>
+                
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1549880181-56a44cf4a9a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Western Landscape">
+                        <div class="gallery-caption">Краєвиди дикого заходу</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Horse Riding">
+                        <div class="gallery-caption">Верхові подорожі</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Western Town">
+                        <div class="gallery-caption">Містечка дикого заходу</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="rdr2.png" alt="Red Dead Redemption 2 Art" onerror="this.style.display='none'">
+                        <div class="gallery-caption">Офіційний арт</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Red Dead Redemption 2 Fan Site. Усі права захищені Rockstar Games.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
